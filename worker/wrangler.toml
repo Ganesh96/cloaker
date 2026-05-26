@@ -1,0 +1,15 @@
+name = "snipe-and-cloak-mei-worker"
+main = "src/index.js"
+compatibility_date = "2026-05-03"
+
+[durable_objects]
+bindings = [
+  { name = "MEI_SESSION", class_name = "MeiSession" }
+]
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["MeiSession"]
+
+[vars]
+RIDERTS_BASE_URL = "https://riderts.app/bustime/api/v3"

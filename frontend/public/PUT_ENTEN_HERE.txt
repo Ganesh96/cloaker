@@ -1,0 +1,5 @@
+Put your 11-second sound file here and name it exactly:
+
+enten.mp3
+
+The app loads it from /enten.mp3 and plays it during Mei when the selected Ken threshold is reached.
