@@ -21,7 +21,7 @@ RIDERTS_BASE_URL = "https://riderts.app/bustime/api/v3"
 if not RIDERTS_API_KEY:
     raise RuntimeError("Missing RIDERTS_API_KEY. Add it to backend/.env")
 
-app = FastAPI(title="Snipe and Cloak Backend", version="0.3.0")
+app = FastAPI(title="Cloaker Backend", version="0.3.0")
 
 allowed_origins = os.getenv(
     "CORS_ALLOW_ORIGINS",
@@ -116,7 +116,7 @@ def geocode_get(q: str) -> List[Dict[str, Any]]:
                 "limit": 5,
                 "addressdetails": 1,
             },
-            headers={"User-Agent": "snipe-and-cloak-local-dev/0.2"},
+            headers={"User-Agent": "cloaker-local-dev/0.2"},
             timeout=12,
         )
         response.raise_for_status()
@@ -365,7 +365,7 @@ class WatchStateRequest(BaseModel):
 
 @app.get("/health")
 def health():
-    return {"ok": True, "service": "snipe-and-cloak-backend"}
+    return {"ok": True, "service": "cloaker-backend"}
 
 
 @app.get("/api/routes")
