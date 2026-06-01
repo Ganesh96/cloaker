@@ -1,4 +1,4 @@
-name = "snipe-and-cloak-mei-worker"
+name = "cloaker-mei-worker"
 main = "src/index.js"
 compatibility_date = "2026-05-03"
 
